@@ -1,0 +1,116 @@
+body{
+	background-image:url("stormtroop.jpg");
+	background-size: cover;
+	background-repeat:no-repeat;
+}
+
+#container{
+	width:900px;
+	height:300px;
+	background-color:none;
+}
+
+h3{
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+
+span{
+	margin:0 auto;
+}
+
+#one:hover{
+	background-color:green;
+}
+
+#two:hover{
+	background-color:green;
+}
+
+#three:hover{
+	background-color:green;
+}
+
+#four:hover{
+	background-color:green;
+}
+
+#one{
+	width:200px;
+	height:250px;
+	background-color:red;
+	float:left;
+	margin-left:15px;
+}
+
+#two{
+	width:200px;
+	height:250px;
+	background-color:red;
+	float:left;
+	margin-left:15px;
+}
+
+#three{
+	width:200px;
+	height:250px;
+	background-color:red;
+	float:left;
+	margin-left:15px;
+}
+
+#four{
+	width:200px;
+	height:250px;
+	background-color:red;
+	float:left;
+	margin-left:15px;
+}
+
+#fight-arena{
+	width:700px;
+	height:350px;
+	background-color:salmon;
+	margin-top:15px;
+}
+
+
+#goodguy{
+	width:250px;
+	height:250px;
+	background-color:lemonchiffon;
+	float:left;
+	border:1px solid black;
+	padding-left:50px;
+	padding-top:50px;
+}
+
+#badguy{
+	width:250px;
+	height:250px;
+	background-color:lemonchiffon;
+	float:left;
+	border:1px solid black;
+	padding-left:50px;
+	padding-top:50px;
+}
+
+#holder{
+	width:600px;
+	height:50px;
+	background-color:grey;
+	float:left;
+}
+
+.title{
+	float:left;
+	margin-left:60px;
+	color:white;
+}
+
+.title2{
+	float:left;
+	margin-left:150px;
+	color:white;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Star Wars RPG</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<style>
+
+
+</style>
+<body>
+	<div id="container">
+		<div id="one">
+		<h3 id="lukers">Luke Skywalker</h3>
+		<img alt="Luke Skywalker" value="Luke Skywalker" src="luke.jpg">
+		<span>100</span>
+		</div>
+		
+		<div id="two">
+		<h3>Obi-Wan Kenobi</h3>
+		<img alt="Obi-Wan Kenobi" value="Obi-Wan Kenobi" src="Obi-wan.jpg">
+		<span>120</span>
+		</div>
+
+		<div id="three">
+		<h3>Darth Maul</h3>
+		<img alt="Darth Maul" value="Darth Maul" src="darth-maul.jpg">
+		<span>180</span>
+		</div>
+
+		<div id="four">
+		<h3>Darth Sidious</h3>
+		<img alt="Darth Sidious" value="Darth Sidious" src="Sidious.jpg">
+		<span>150</span>
+		</div>
+
+	</div>
+
+
+<div id="fight-arena">
+<!--<h3 class="title">YOUR CHARACTER</h3>-->
+	<div id="goodguy">
+	</div>
+	
+<!--<h3 class="title">DEFENDER</h3>-->
+	<div id="badguy">
+	<div cid="info2">
+	</div>
+	</div>
+	<div id="holder">
+	<h3 class="title">YOUR CHARACTER</h3>
+	<h3 class="title2">OPPONENT</h3>
+	</div>
+</div>
+
+
+</body>
+<script>
+var luke = {
+	health:100,
+	attack:25,
+	counterattack: 50,
+};
+
+var obi = {
+	health:120,
+	attack:25,
+	counterattack: 50,
+};
+
+var maul = {
+	health:180,
+	attack:25,
+	counterattack: 50,
+};
+
+var sid = {
+	health:150,
+	attack:25,
+	counterattack: 50,
+};
+
+var goodGuySelect = false;
+var badGuySelect = false;
+
+
+$(document).ready(function(){
+
+	$("#one").on("click" ,function(){
+
+	
+		if(goodGuySelect === false) {
+
+			$("#goodguy").html("<img alt='Luke Skywalker' value='Luke Skywalker' src='luke.jpg'>")
+			$("#goodguy").append("health: " + luke.health)
+			alert("You have pick Luke Skywalker....may the force be with you.")
+			goodGuySelect = true;
+			}
+			 else {
+				$("#badguy").html("<img alt='Luke Skywalker' value='Luke Skywalker' src='luke.jpg'>");
+				$("#badguy").append("health: " + luke.health)
+				badGuySelect = true;
+				}
+			$("#one").remove();
+		});
+		
+
+	$("#two").click(function(){
+
+		if(goodGuySelect === false){
+			$("#goodguy").html("<img alt='Obi-Wan Kenobi' value='Obi-Wan Kenobi' src='Obi-wan.jpg'>");
+			$("#goodguy").append("health: " + obi.health)
+			alert("You have pick Obi-Wan Kenobi....may the force be with you.");
+			goodGuySelect = true;
+		} else {
+			$("#badguy").html("<img alt='Obi-Wan Kenobi' value='Obi-Wan Kenobi' src='Obi-wan.jpg'>");
+			$("#badguy").append("health: " + obi.health)
+			badGuySelect = true;
+		}
+		$("#two").remove();
+		});		
+		
+
+	$("#three").click(function(){
+
+		if(goodGuySelect === false){
+			$("#goodguy").html("<img alt='Darth Maul' value='Darth Maul' src='darth-maul.jpg'>");
+			$("#goodguy").append("health: " + maul.health)
+			alert("You have pick Darth Maul");
+			goodGuySelect = true;
+		} else {
+			$("#badguy").html("<img alt='Darth Maul' value='Darth Maul' src='darth-maul.jpg'>");
+			$("#badguy").append("health: " + maul.health)
+			badGuySelect = true;
+		}
+		$("#three").remove();
+		});		
+
+	$("#four").click(function(){
+
+		if(goodGuySelect === false){
+		$("#goodguy").html("<img alt='Darth Sidious' value='Darth Sidious' src='Sidious.jpg'>");
+		$("#goodguy").append("health: " + sid.health)
+		alert("Good...good...you have picked Darth Sidious.")
+		goodGuySelect = true;
+	} else {
+		$("#badguy").html("<img alt='Darth Sidious' value='Darth Sidious' src='Sidious.jpg'>");
+		$("#badguy").append("health: " + sid.health)
+		badGuySelect = true;
+	}
+		$("#four").remove();
+		});		
+
+
+});
+
+</script>
+</html>
